@@ -1,0 +1,33 @@
+.textarea,
+.input{
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    background: #fff;
+    transition: 0.2s;
+    margin-bottom: 1rem;
+}
+.input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    margin: 0 0.5rem 0 0;
+}
+
+.input:hover, .textarea:hover {
+    border-color: var(--color);
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--color);
+    background: white;
+    box-shadow: 0 0 0 3px var(--color-light);
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
