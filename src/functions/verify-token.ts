@@ -8,6 +8,7 @@ export default async function verifyToken(token: string) {
         });
         return true;
     } catch (error) {
+        console.log(error)
         return false;
     }
 }
