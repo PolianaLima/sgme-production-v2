@@ -1,4 +1,9 @@
- export const API_URL = process.env.PUBLIC_URL_API;
+ export const API_URL = process.env.URL_API;
+ export function USER_CADASTRO(){
+     return {
+         url: `${API_URL}/auth/register`,
+     }
+ }
 
 export function USER_LOGIN(){
     return {

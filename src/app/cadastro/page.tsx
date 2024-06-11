@@ -3,6 +3,7 @@ import Image from "next/image";
 import LoginForm from "@/components/usuario/login";
 import React from "react";
 import CadastroForm from "@/components/usuario/cadastro";
+import getVendas from "@/actions/vendas/getVendas";
 
 export const metadata :Metadata={
     title:"Cadastro de usuarios",
@@ -10,7 +11,6 @@ export const metadata :Metadata={
 }
 
 export default  function CadastroPage(){
-
 
     return (
         <main className="container-fluid d-flex align-items-center"

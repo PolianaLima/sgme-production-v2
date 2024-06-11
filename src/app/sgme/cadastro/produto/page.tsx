@@ -1,4 +1,5 @@
 import {Metadata} from "next";
+import getVendas from "@/actions/vendas/getVendas";
 
 export const metadata: Metadata = {
     title: "Cadastro de produtos",
@@ -6,10 +7,16 @@ export const metadata: Metadata = {
 }
 
 
-export default function CadastroProduto(){
+export default async  function CadastroProduto(){
+
+    const {data} =await getVendas();
+
+    console.log(data);
+
     return(
         <div className="mt-4 p-2">
             <h1>Cadastro de produtos</h1>
+
         </div>
     )
 }

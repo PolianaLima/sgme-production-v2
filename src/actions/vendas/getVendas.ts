@@ -13,6 +13,7 @@ export default async function getVendas() {
                 Authorization: `Bearer ${token}`
             }
         })
+        console.log(response.data)
         return {data: response.data, ok:true, error:''}
     }catch (error: unknown) {
         return apiError(error)
