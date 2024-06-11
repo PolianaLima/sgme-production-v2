@@ -29,14 +29,13 @@ export const useUser = () => {
 export function UserContextProvider({children, user}: { children: React.ReactNode; user: User | null;}) {
     const [userState, setUser] = React.useState<User | null>(user);
 
-   /* useEffect(() => {
+   useEffect(() => {
         const tokenValidate = async ()=>{
             await validateToken();
         }
-
         tokenValidate();
     }, [userState]);
-*/
+
     return (
         <UserContext.Provider value={{user: userState, setUser}}>
             {children}

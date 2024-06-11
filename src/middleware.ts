@@ -1,10 +1,9 @@
 import {type NextRequest, NextResponse} from "next/server";
 import getUsuarioCokkies from "./functions/get-usuario-cokkies";
-import verifyToken from "@/functions/verify-token";
 
 export async function middleware(request:NextRequest){
     const token = getUsuarioCokkies();
-    const authenticated = token ? await verifyToken(token): false;
+    const authenticated = token ? true: false;
 
     if(!authenticated && request.nextUrl.pathname.startsWith('/sgme')){
         return NextResponse.redirect(new URL('/login', request.url))
