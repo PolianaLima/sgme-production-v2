@@ -17,11 +17,6 @@
     outline: none;
 }
 
-.formularioBusca > button {
-    border: none;
-    padding: 0.5rem;
-}
-
 .formularioFiltroStatus {
     display: flex;
     flex-direction: row;
@@ -32,13 +27,5 @@
 .formularioFiltroStatus > select {
     border: 1px solid #4682B4;
     padding-right: 3rem;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.formularioFiltroStatus > button {
-    background-color:#4682B4 ;
-    border: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    border-radius: 5px;
 }
