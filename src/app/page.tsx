@@ -4,49 +4,48 @@ import {Metadata} from "next";
 import LoginForm from "@/components/usuario/login";
 import Link from "next/link";
 
-export const metadata :Metadata={
-    title:"Login",
-    description:"Pagina de Login Sgme",
+export const metadata: Metadata = {
+    title: "Login",
+    description: "Pagina de Login Sgme",
 }
 
 export default function Home() {
     return (
-        <main className="container-fluid d-flex align-items-center"
-              style={{
-                  height: '100vh',
-              }}>
-            <div className="container-sm d-sm-flex justify-content-center align-items-center pt-2">
-                <div className="w-100 d-flex justify-content-center me-3">
-                    <Image src="/img/login.svg"
+        <div className="container-fluid d-flex align-items-center justify-content-center"
+             style={{
+                 height: '100vh',
+             }}>
+
+            <div className="d-sm-flex justify-content-center align-items-center w-100 p-5">
+                <div className="container d-flex flex-column w-100">
+                    <h3 style={{fontSize: '60px'}}>Transforme sua</h3>
+                    <h1 style={{fontSize: '100px'}}> Paixão</h1>
+                    <h3 style={{fontSize: '50px'}}>Em Negócio com </h3>
+                    <h1 className="fw-bold" style={{fontSize: '80px'}}>Gestão Eficiente</h1>
+
+                    <Link className="d-flex  align-items-center text-decoration-none" href='login'>
+                        <p className="fs-3 btn btn-success">Faça login e descubra </p>
+                        <i className="h3 bi bi-arrow-right"></i>
+                    </Link>
+
+                </div>
+
+                <div className="w-100 d-flex justify-content-start">
+                    <Image src="/img/icone_home_v2.svg"
                            alt="Imagem de login"
-                           width={500}
-                           height={500}
+                           width={700}
+                           height={700}
                            sizes="100vw"
                            priority={true}
                     />
+
+
                 </div>
-                <div className="w-100 border p-5 rounded-2 d-flex flex-column align-items-center">
-                    <div className='d-flex flex-row justify-content-center'>
-                        <Image src="/img/logotipo.svg"
-                               alt="Imagem de login"
-                               width={100}
-                               height={50}
-                               sizes="100vw"
-                               priority={true}
-                               className="m-0"
-                        />
-                        <h1 >Bem vindo(a)</h1>
-                    </div>
-                    <div>
-                      <Link className="btn btn-primary" href="login">
-                          <i className="bi bi-airplane-engines text-white"> </i>
-                          ACESSAR SISTEMA</Link>
-                    </div>
-                </div>
+
 
 
             </div>
 
-        </main>
+        </div>
     );
 }

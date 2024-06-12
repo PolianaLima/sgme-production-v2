@@ -1,10 +1,22 @@
 import axios from "axios";
 
-export default function apiError(error: unknown):{data: null, ok: false, error: string}{
+type ApiError = {
+    data: null;
+    ok: false;
+    error: string;
+}
+
+export default function apiError(error:unknown): ApiError{
+    let message = "Ocorreu um erro inesperado";
     if (axios.isAxiosError(error) && error.response) {
-        return {data: null, ok: false, error: error.response.data.message,}
-    } else {
-        return {data: null, ok: false, error: "Erro generico"}
+        message = error.response.data.message || message;
+    } else if (error instanceof Error) {
+        message = error.message;
     }
+    return {
+        data: null,
+        ok: false,
+        error: message,
+    };
 
 }

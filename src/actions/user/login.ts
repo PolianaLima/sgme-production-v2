@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import {cookies} from "next/headers";
-import {API_URL, USER_LOGIN} from "@/functions/api";
+import {USER_LOGIN} from "@/functions/api";
 import apiError from "@/functions/api-erro";
 
 

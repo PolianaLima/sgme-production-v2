@@ -18,7 +18,7 @@ export default async function RootLayout({
     return (
         <html lang="pt-BR">
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"/>
-        <body className="bg-secondary-subtle">
+        <body>
         <UserContextProvider user={user}>
             <main>
                 {children}

@@ -23,6 +23,14 @@ export function TOKEN_VALIDATE(){
     }
 }
 
+//produtos
+
+ export function GET_PRODUTOS(){
+     return{
+            url: `${API_URL}/produtos`,
+     }
+ }
+
 export function GET_VENDAS(){
     return{
         url: `${API_URL}/vendas`,
