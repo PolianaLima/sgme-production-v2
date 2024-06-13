@@ -4,10 +4,9 @@ import {useState} from "react";
 
 type Props = {
     onSearchChange: (search: string) => void
-    onStatusChange: (status: string) => void
 }
 
-export default function FiltroDados({onSearchChange, onStatusChange}: Props) {
+export default function FiltroDados({onSearchChange}: Props) {
     const [search, setSearch] = useState('');
     const [status, setStatus] = useState('todos');
 
@@ -18,7 +17,6 @@ export default function FiltroDados({onSearchChange, onStatusChange}: Props) {
 
     const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setStatus(e.target.value);
-        onStatusChange(e.target.value);
     }
 
     return (
@@ -28,14 +26,6 @@ export default function FiltroDados({onSearchChange, onStatusChange}: Props) {
                     <input type="text" value={search} onChange={handleSearchChange}
                            placeholder="Pesquisar por nome ou código"/>
                     <i className="bi bi-search p-2"></i>
-                </div>
-                <div className={`${styles.formularioFiltroStatus}`}>
-                    <label className="me-3">Filtrar por:</label>
-                    <select name="status" value={status} id="status" onChange={handleStatusChange}>
-                        <option value="">Todos</option>
-                        <option value="ATIVO">Ativo</option>
-                        <option value="INATIVO">Inativo</option>
-                    </select>
                 </div>
             </form>
         </div>

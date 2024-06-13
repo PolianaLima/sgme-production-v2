@@ -1,7 +1,7 @@
 import {Metadata} from "next";
-import CadastroProdutoForm from "@/components/produtos/cadastro-form";
 import React from "react";
 import Image from "next/image";
+import CadastroProdutoForm from "@/components/produtos/cadastro-produto-form";
 
 export const metadata: Metadata = {
     title: "Cadastro de produtos",
@@ -31,8 +31,5 @@ export default function ProdutoNovo() {
                 </div>
             </div>
         </div>
-
-
     )
-
 }

@@ -8,7 +8,6 @@ type ApiError = {
 
 export default function apiError(error: unknown): ApiError {
     let errorMessage = "Ocorreu um erro inesperado";
-
     if (axios.isAxiosError(error)) {
         if (error.response) {
             errorMessage = error.response.data?.message || "Erro desconhecido do servidor";

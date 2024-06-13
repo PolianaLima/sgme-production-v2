@@ -17,3 +17,15 @@ export type ApiResponse = {
         ok: boolean;
         error: string;
 };
+
+
+export type ApiResponseProdutoId = {
+        data: Produto | null;
+        ok: boolean;
+        error: string;
+};
+
+
+export type ProdutoId = {
+    id: string;
+}

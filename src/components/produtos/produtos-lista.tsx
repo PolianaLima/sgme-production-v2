@@ -10,24 +10,27 @@ type Props = {
 }
 
 export default function ProdutosLista({ produtos}: Props) {
-
     const [search, setSearch] = useState('');
-    const [status, setStatus] = useState('todos');
     const [filteredProdutos, setFilteredProdutos] = useState(produtos);
 
 
     useEffect(() => {
+        if (!produtos) {
+            setFilteredProdutos([]);
+            return;
+        }
+
         const newFilteredProdutos = produtos?.filter(produto => {
-            const matchesSearch = produto.nome.includes(search) || produto.codigo.includes(search);
-            const matchesStatus = status === 'todos' || produto.status === status;
-            return matchesSearch && matchesStatus;
+            return produto.nome.includes(search) || produto.codigo.includes(search) ;
         });
         setFilteredProdutos(newFilteredProdutos);
-    }, [search, status, produtos]);
+    }, [search, produtos]);
+
+    //Verificar para que ao filtrar os produtos, a lista de produtos seja atualizada inclusive quando selecionar todos
 
     return (
         <div className="mt-3">
-            <FiltroDados onSearchChange={setSearch} onStatusChange={setStatus} />
+            <FiltroDados onSearchChange={setSearch} />
             <table className="table table-borderless">
                 <thead>
                 <tr>
