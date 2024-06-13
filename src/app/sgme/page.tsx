@@ -20,7 +20,7 @@ export default async function Home() {
             <h2 className="text-app-sgme fs-2 text-center">Menu Rapido</h2>
             <div className="container-sm d-sm-flex flex-wrap justify-content-between">
                 <ImagemButton img="/img/icone_pdv_venda.svg" link="#" titleLink="Nova Venda"/>
-                <ImagemButton img="/img/icone_cad_produto.svg" link="/cadastro/produto" titleLink="Novo Produto"/>
+                <ImagemButton img="/img/icone_cad_produto.svg" link="/sgme/cadastro/produto/novo" titleLink="Novo Produto"/>
                 <ImagemButton img="/img/icone_cad_cliente.svg" link="#" titleLink="Novo Cliente"/>
                 <ImagemButton img="/img/icone_cad_fornecedor.png" link="#" titleLink="Novo Fornecedor"/>
                 <ImagemButton img="/img/icone_contas_pagar.svg" link="#" titleLink="Nova Despesa"/>

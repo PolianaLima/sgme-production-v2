@@ -31,6 +31,12 @@ export function TOKEN_VALIDATE(){
      }
  }
 
+ export function POST_PRODUTOS(){
+     return{
+         url: `${API_URL}/produtos/cadastro`,
+     }
+ }
+
 export function GET_VENDAS(){
     return{
         url: `${API_URL}/vendas`,

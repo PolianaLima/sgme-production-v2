@@ -4,8 +4,8 @@ import getProdutos from "@/actions/produtos/get-produtos";
 import ProdutosLista from "@/components/produtos/produtos-lista";
 
 export const metadata: Metadata = {
-    title: "Cadastro de produtos",
-    description: "Pagina  de cadastro de produto no sistema",
+    title: "Produtos",
+    description: "Pagina  de listagem de produtos",
 }
 
 

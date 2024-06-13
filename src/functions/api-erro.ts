@@ -6,17 +6,27 @@ type ApiError = {
     error: string;
 }
 
-export default function apiError(error:unknown): ApiError{
-    let message = "Ocorreu um erro inesperado";
-    if (axios.isAxiosError(error) && error.response) {
-        message = error.response.data.message || message;
+export default function apiError(error: unknown): ApiError {
+    let errorMessage = "Ocorreu um erro inesperado";
+
+    if (axios.isAxiosError(error)) {
+        if (error.response) {
+            errorMessage = error.response.data?.message || "Erro desconhecido do servidor";
+        } else if (error.request) {
+            errorMessage = "Nenhuma resposta do servidor. Por favor, verifique sua conexão de rede.";
+        } else {
+            errorMessage = error.message;
+        }
     } else if (error instanceof Error) {
-        message = error.message;
+        errorMessage = error.message;
     }
+
+    console.log("Erro:", errorMessage);
+
     return {
         data: null,
         ok: false,
-        error: message,
+        error: errorMessage
     };
 
 }

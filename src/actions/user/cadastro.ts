@@ -1,7 +1,7 @@
-'use server'
+'use server';
 
 import axios from "axios";
-import {API_URL, USER_CADASTRO} from "@/functions/api";
+import {USER_CADASTRO} from "@/functions/api";
 import apiError from "@/functions/api-erro";
 
 export default  async function cadastro({}, formData: FormData) {
