@@ -38,11 +38,11 @@ export default function CadastroProdutoForm() {
                 <Input label="Codigo" name="codigo" type="text" error={state.error}
                        placeholder="Digite o codigo do produto"/>
                 <Input label="Nome" name="nome" type="text" error={state.error}
-                       placeholder="Digite o descrição do produto"/>
+                       placeholder={state.error ? "*Campo Obrigatorio" : "Descrição do produto"}/>
                 <Input label="Custo" name="custo" type="text" error={state.error}
-                       placeholder="Digite o custo do produto"/>
+                       placeholder={state.error ? "*Campo Obrigatorio" : "Custo do produto"}/>
                 <Input label="Preço" name="preco" type="text" error={state.error}
-                       placeholder="Digite o preço do produto"/>
+                       placeholder={state.error ? "*Campo Obrigatorio" : "Preço do produto"}/>
                 <ErrorMessage error={state.error}/>
                 <FormButton/>
             </form>

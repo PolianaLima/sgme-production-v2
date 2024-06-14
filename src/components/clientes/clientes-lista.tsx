@@ -5,6 +5,7 @@ import React, {useEffect, useState} from "react";
 import FiltroDados from "@/components/shared/filtro-dados";
 import {format, parseISO} from "date-fns";
 import {ptBR} from "date-fns/locale";
+import Link from "next/link";
 
 type Props = {
     clientes?: Cliente[] | null
@@ -28,7 +29,7 @@ export default function ClientesLista({clientes}: Props) {
 
     return (
         <div className="mt-3">
-            <FiltroDados onSearchChange={setSearch}/>
+            <FiltroDados onSearchChange={setSearch} mPlaceholder="Pesquise pelo nome ou pelo documento"/>
             <table className="table table-borderless">
                 <thead>
                 <tr>
@@ -52,8 +53,8 @@ export default function ClientesLista({clientes}: Props) {
                             <td>{format(parseISO(cliente.data_nascimento), 'dd/MM/yyyy', {locale:ptBR})}</td>
                             <td>{cliente.status.toLowerCase()}</td>
                             <td>
-                                <button className="btn btn-success"> <i
-                                    className="bi bi-pencil text-white"></i></button>
+                                <Link href={`/sgme/cadastro/cliente/${cliente.id}`}  className="btn btn-success"> <i
+                                    className="bi bi-pencil text-white"></i></Link>
                             </td>
                         </tr>
                     ))):(

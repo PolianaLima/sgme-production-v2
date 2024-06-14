@@ -1,6 +1,5 @@
 import {Metadata} from "next";
 import Link from "next/link";
-import ProdutosLista from "@/components/produtos/produtos-lista";
 import getClientes from "@/actions/clientes/get-clientes";
 import ClientesLista from "@/components/clientes/clientes-lista";
 
@@ -26,7 +25,7 @@ export default async function ClientePage(){
             <div className="bg-primary p-2 d-flex flex-row rounded-top-2">
                 <i className="h5 bi bi-gear text-white"> <span className="text-white"> Opções</span> </i>
             </div>
-            {/* eslint-disable-next-line react/jsx-no-undef */}
+
          <ClientesLista clientes={clientes}/>
         </div>
     )

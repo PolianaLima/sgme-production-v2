@@ -3,7 +3,7 @@ import {Produto} from "@/types/produtos";
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import Image from "next/image";
-import FiltroDados from "@/components/produtos/filtro-dados";
+import FiltroDados from "@/components/shared/filtro-dados";
 
 type Props = {
     produtos?: Produto[] | null
@@ -29,7 +29,7 @@ export default function ProdutosLista({ produtos}: Props) {
 
     return (
         <div className="mt-3">
-            <FiltroDados onSearchChange={setSearch} />
+            <FiltroDados onSearchChange={setSearch}  mPlaceholder="Pesquise pela descrição ou pelo código"/>
             <table className="table table-borderless">
                 <thead>
                 <tr>

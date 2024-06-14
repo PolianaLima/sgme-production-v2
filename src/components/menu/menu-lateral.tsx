@@ -47,7 +47,7 @@ export default function MenuLateral() {
                                         className="d-none d-sm-inline "> Clientes</span></Link>
                             </li>
                             <li className="w-100">
-                                <Link href="#" className="nav-link px-0 ">
+                                <Link href="/sgme/cadastro/fornecedor" className="nav-link px-0 ">
                                     <i className="bi bi-box-seam-fill fs-5"></i>
                                     <span
                                         className="d-none d-sm-inline "> Fornecedores</span> </Link>

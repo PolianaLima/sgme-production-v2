@@ -14,7 +14,7 @@ export default async function updateProduto({} ,formData: FormData){
 
     const id = formData.get('id') as unknown as ProdutoId;
 
-    const updateRequest = {
+    const updateProdutoRequest = {
         codigo: formData.get('codigo'),
         nome: formData.get('nome'),
         custo: custoFormatado,
@@ -22,16 +22,15 @@ export default async function updateProduto({} ,formData: FormData){
         status: formData.get('status')
     }
 
-    console.log("updateRequest",updateRequest)
 
     try {
-        if(!updateRequest.nome || !updateRequest.custo || !updateRequest.preco){
-            return {data: null, ok: false, error: 'Preencha todos os campos'}
+        if(!updateProdutoRequest.nome || !updateProdutoRequest.custo || !updateProdutoRequest.preco){
+            return {data: null, ok: false, error: 'Preencha todos os campos obrigatorios'}
         }
 
         const {url} = PUT_PRODUTO_ID(id);
         const token = cookies().get('token')?.value;
-        const response = await axios.put(url,updateRequest,{
+        const response = await axios.put(url,updateProdutoRequest,{
             headers: {
                 Authorization: `Bearer ${token}`
             }

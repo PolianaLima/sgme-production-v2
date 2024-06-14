@@ -12,7 +12,7 @@ export default async function cadastroProduto({}, formData: FormData) {
     const custoFormatado = Number(formData.get('custo')?.toString()
         .replace(',', '.'));
 
-    const cadastroRequest = {
+    const produtoRequest = {
         codigo: formData.get('codigo'),
         nome: formData.get('nome'),
         custo: custoFormatado,
@@ -20,14 +20,14 @@ export default async function cadastroProduto({}, formData: FormData) {
     }
 
     try {
-        if(!cadastroRequest.nome || !cadastroRequest.custo || !cadastroRequest.preco){
-            return {data: null, ok: false, error: 'Preencha todos os campos'}
+        if(!produtoRequest.nome || !produtoRequest.custo || !produtoRequest.preco){
+            return {data: null, ok: false, error: '\'Preencha todos os campos obrigatorios'}
         }
 
         const {url} = POST_PRODUTOS();
         const token = cookies().get('token')?.value;
 
-        const response =await axios.post(url,cadastroRequest,{
+        const response =await axios.post(url,produtoRequest,{
             headers: {
                 Authorization: `Bearer ${token}`
             }

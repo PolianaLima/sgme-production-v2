@@ -5,9 +5,10 @@ import {useState} from "react";
 
 type Props = {
     onSearchChange: (search: string) => void
+    mPlaceholder?: string
 }
 
-export default function FiltroDados({onSearchChange}: Props) {
+export default function FiltroDados({onSearchChange, mPlaceholder}: Props) {
     const [search, setSearch] = useState('');
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +21,7 @@ export default function FiltroDados({onSearchChange}: Props) {
             <form className="w-100 d-flex justify-content-between">
                 <div className={`${styles.formularioBusca}`}>
                     <input type="text" value={search} onChange={handleSearchChange}
-                           placeholder="Pesquisar por nome ou código"/>
+                           placeholder={mPlaceholder}/>
                     <i className="bi bi-search p-2"></i>
                 </div>
             </form>
