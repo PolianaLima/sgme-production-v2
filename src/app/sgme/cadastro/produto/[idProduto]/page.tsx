@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 
 
-export default async function ProdutosDetalhes({ params }:Props){
+export default async function UpdateProdutoPage({ params }:Props){
     const { idProduto } = params;
     const {data: produto} = await getProdutoId(idProduto as unknown as ProdutoId);
 

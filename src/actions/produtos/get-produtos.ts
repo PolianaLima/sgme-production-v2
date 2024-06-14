@@ -2,9 +2,9 @@ import apiError from "@/functions/api-erro";
 import {cookies} from "next/headers";
 import {GET_PRODUTOS} from "@/functions/api";
 import axios from "axios";
-import {ApiResponse, Produto} from "@/types/produtos";
+import {ApiResponseProdutos, Produto} from "@/types/produtos";
 
-export default async function getProdutos(): Promise<ApiResponse> {
+export default async function getProdutos(): Promise<ApiResponseProdutos> {
     try{
         const token = cookies().get('token')?.value;
         const {url} = GET_PRODUTOS();

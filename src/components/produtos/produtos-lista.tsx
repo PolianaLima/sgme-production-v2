@@ -26,7 +26,6 @@ export default function ProdutosLista({ produtos}: Props) {
         setFilteredProdutos(newFilteredProdutos);
     }, [search, produtos]);
 
-    //Verificar para que ao filtrar os produtos, a lista de produtos seja atualizada inclusive quando selecionar todos
 
     return (
         <div className="mt-3">
@@ -58,7 +57,7 @@ export default function ProdutosLista({ produtos}: Props) {
                             })}</td>
                             <td>{produto.status.toLowerCase()}</td>
                             <td>
-                                <Link href={`/sgme/cadastro/produto/${produto.id}`} className="btn btn-primary"> <i
+                                <Link href={`/sgme/cadastro/produto/${produto.id}`} className="btn btn-success"> <i
                                     className="bi bi-pencil-square text-white">
 
                                 </i></Link>

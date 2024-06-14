@@ -1,14 +1,14 @@
 import {Metadata} from "next";
 import ImagemButton from "@/components/dashboard/ImagemButton";
 import {useUser} from "@/context/user-context";
-import UsuarioName from "@/components/usuario";
+import UsuarioName from "@/components/usuario/usuario";
 
 export const metadata: Metadata = {
     title: "Dashboard",
     description: "Pagina de Dashboard do sistema",
 }
 
-export default async function Home() {
+export default async function HomePage() {
     return (
         <div className="container-fluid d-sm-flex flex-sm-column justify-content-center pb-5 mt-4">
             <div className="d-sm-flex justify-content-center align-items-center mb-4">

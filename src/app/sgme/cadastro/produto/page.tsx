@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 
-export default async function CadastroProduto() {
+export default async function ProdutosPage() {
 
     const {data: produtos} = await getProdutos();
     return (
@@ -28,10 +28,6 @@ export default async function CadastroProduto() {
                 <i className="h5 bi bi-gear text-white"> <span className="text-white"> Opções</span> </i>
             </div>
             <ProdutosLista produtos={produtos}/>
-
-            {/*<FiltroDados/>
-            */}
-
         </div>
     )
 }

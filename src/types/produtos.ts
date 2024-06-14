@@ -12,7 +12,7 @@ export type Produto =
     }
 
 
-export type ApiResponse = {
+export type ApiResponseProdutos = {
         data: Produto[] | null;
         ok: boolean;
         error: string;

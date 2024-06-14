@@ -24,8 +24,7 @@ export default function Home() {
                     <h1 className="fw-bold" style={{fontSize: '80px'}}>Gestão Eficiente</h1>
 
                     <Link className="d-flex  align-items-center text-decoration-none" href='login'>
-                        <p className="fs-3 btn btn-success">Faça login e descubra </p>
-                        <i className="h3 bi bi-arrow-right"></i>
+                        <p className="fs-3 btn btn-success">Clique aqui para acessar o sistema </p>
                     </Link>
 
                 </div>

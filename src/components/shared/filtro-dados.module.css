@@ -1,0 +1,18 @@
+.formularioBusca {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #4682B4;
+    border-radius: 5px;
+    padding: 0.1rem;
+    width: 100%;
+}
+
+.formularioBusca > input {
+    border: none;
+    padding: 0.2rem;
+    width: 100%;
+}
+
+.formularioBusca > input:focus {
+    outline: none;
+}

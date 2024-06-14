@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Pagina de Login Sgme",
 }
 
-export default function Home() {
+export default function LoginPage() {
     return (
         <main className="container-fluid d-flex align-items-center"
               style={{

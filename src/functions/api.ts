@@ -52,6 +52,14 @@ export function PUT_PRODUTO_ID(id: ProdutoId) {
     }
 }
 
+//clientes
+export function GET_CLIENTES() {
+    return {
+        url: `${API_URL}/clientes`,
+    }
+
+}
+
 export function GET_VENDAS() {
     return {
         url: `${API_URL}/vendas`,
