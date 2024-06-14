@@ -24,11 +24,10 @@ function FormButton() {
                     <button className="button me-3">SALVAR</button>
                     <button className="button bg-danger" onClick={(event) => {
                         event.preventDefault();
-                        window.location.href = '/sgme/cadastro/cliente';
+                        window.location.href = '/sgme/cadastro/fornecedor';
                     }}>CANCELAR
                     </button>
                 </div>
-
             )}
         </>
     )

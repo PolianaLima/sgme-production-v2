@@ -12,7 +12,14 @@ function FormButton() {
             {pending ? (
                 <button disabled={pending} className="bg-warning button">Cadastrando</button>
             ) : (
-                <button className="button">CADASTRAR</button>
+                <div className="d-flex">
+                    <button className="button me-3">SALVAR</button>
+                    <button className="button bg-danger" onClick={(event) => {
+                        event.preventDefault();
+                        window.location.href = '/sgme/cadastro/produto';
+                    }}>CANCELAR
+                    </button>
+                </div>
             )}
         </>
     )

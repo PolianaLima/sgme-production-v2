@@ -66,9 +66,10 @@ export default function ProdutosLista({ produtos}: Props) {
                     ))) : (
                     <tr>
                         <td colSpan={6} className="text-center">
-                            <Image src="/img/dado_nao_encontrado.svg" alt="Not Found" width={500} height={500}
+                            <Image src="/img/dado_nao_encontrado.svg" alt="Not Found" width={350} height={350}
                                    priority={false}/>
-                            <h1>Nenhum produto encontrado!</h1>
+                            <h3>Você nao tem produtos cadastrado no sistema</h3>
+                            <Link href="/sgme/cadastro/produto/novo" className="btn btn-primary">Adicione seu primeiro produto aqui</Link>
                         </td>
                     </tr>
 

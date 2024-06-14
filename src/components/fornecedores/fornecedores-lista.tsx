@@ -4,6 +4,7 @@ import FiltroDados from "@/components/shared/filtro-dados";
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
 import {Fornecedor} from "@/types/fornecedores";
+import Image from "next/image";
 
 type Props = {
     fornecedores?: Fornecedor[] | null
@@ -54,8 +55,12 @@ export default function FornecedorLista({fornecedores}: Props) {
                         </tr>
                     ))) : (
                     <tr>
-                        <td colSpan={5}>
-
+                        <td colSpan={6} className="text-center">
+                            <Image src="/img/dado_nao_encontrado.svg" alt="Not Found" width={350} height={350}
+                                   priority={false}/>
+                            <h3>Você nao tem fornecedores cadastrado no sistema</h3>
+                            <Link href="/sgme/cadastro/fornecedor/novo" className="btn btn-primary">Adicione seu primeiro
+                                fornecedor aqui</Link>
                         </td>
                     </tr>
                 )}

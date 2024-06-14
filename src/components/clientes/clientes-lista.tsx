@@ -6,6 +6,7 @@ import FiltroDados from "@/components/shared/filtro-dados";
 import {format, parseISO} from "date-fns";
 import {ptBR} from "date-fns/locale";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
     clientes?: Cliente[] | null
@@ -57,10 +58,14 @@ export default function ClientesLista({clientes}: Props) {
                                     className="bi bi-pencil text-white"></i></Link>
                             </td>
                         </tr>
-                    ))):(
+                    ))): (
                     <tr>
-                        <td colSpan={6}>
-
+                        <td colSpan={6} className="text-center">
+                            <Image src="/img/dado_nao_encontrado.svg" alt="Not Found" width={350} height={350}
+                                   priority={false}/>
+                            <h3>Você nao tem clientes cadastrado no sistema</h3>
+                            <Link href="/sgme/cadastro/cliente/novo" className="btn btn-primary">Adicione seu primeiro
+                                cliente aqui</Link>
                         </td>
                     </tr>
                 )}
