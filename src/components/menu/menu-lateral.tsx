@@ -10,11 +10,11 @@ export default function MenuLateral() {
             <div
                 className="d-flex flex-column align-items-center align-items-sm-start w-100 pt-2 min-vh-100 ps-4">
                 <Link href="/sgme"
-                      className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                                 <span className="fs-5 d-none d-sm-inline text-white">
                                     <Image src="/img/logotipo.svg" alt="Logotipo" width={200}
-                                           height={100}
-                                           priority={true}
+                                        height={100}
+                                        priority={true}
                                     />
                                 </span>
                 </Link>
@@ -30,7 +30,7 @@ export default function MenuLateral() {
 
                     <li className="w-100">
                         <Link href="#submenu2" data-bs-toggle="collapse"
-                              className="nav-link px-0 align-middle ">
+                            className="nav-link px-0 align-middle ">
                             <i className="fs-2 bi bi-folder-plus"></i>
                             <span className="ms-1 d-none d-sm-inline ">Cadastro</span></Link>
                         <ul className="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
@@ -62,20 +62,20 @@ export default function MenuLateral() {
 
                     <li className="w-100">
                         <Link href="#submenu3" data-bs-toggle="collapse"
-                              className="nav-link px-0 align-middle">
+                            className="nav-link px-0 align-middle">
                             <i className="fs-2 bi bi-cash-coin"></i> <span
                             className="ms-1 d-none d-sm-inline">Financeiro</span> </Link>
                         <ul className="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                             <li className="w-100">
-                                <Link href="#"
-                                      className="nav-link px-0">
+                                <Link href="/sgme/financeiro/contas-a-pagar"
+                                    className="nav-link px-0">
                                     <i className="fs-5 bi bi-arrow-down-square-fill"></i>
                                     <span
                                         className="d-none d-sm-inline"> Contas a pagar</span> </Link>
                             </li>
                             <li className="w-100">
                                 <Link href="#"
-                                      className="nav-link px-0">
+                                    className="nav-link px-0">
                                     <i className="fs-5 bi bi-arrow-up-square-fill"></i><span
                                     className="d-none d-sm-inline "> Contas a receber</span> </Link>
                             </li>

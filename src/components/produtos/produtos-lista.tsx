@@ -43,7 +43,7 @@ export default function ProdutosLista({ produtos}: Props) {
                 </thead>
                 <tbody>
                 {filteredProdutos && filteredProdutos.length > 0 ? (
-                    filteredProdutos?.map((produto: any) => (
+                    filteredProdutos?.map((produto: Produto) => (
                         <tr key={produto.id}>
                             <td>{produto.codigo}</td>
                             <td>{produto.nome}</td>

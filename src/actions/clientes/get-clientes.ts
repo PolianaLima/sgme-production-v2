@@ -1,4 +1,4 @@
-import {ApiResponseClientes} from "@/types/clientes";
+import {ApiResponseClientes, Cliente} from "@/types/clientes";
 import apiError from "@/functions/api-erro";
 import {cookies} from "next/headers";
 import {GET_CLIENTES} from "@/functions/api";
@@ -9,7 +9,7 @@ export default async function getClientes(): Promise<ApiResponseClientes> {
         const token = cookies().get('token')?.value;
         const {url} = GET_CLIENTES();
 
-        const response = await axios.get(url,{
+        const response = await axios.get<Cliente[]>(url,{
             headers: {
                 Authorization: `Bearer ${token}`,
             },

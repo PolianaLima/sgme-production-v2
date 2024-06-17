@@ -104,8 +104,24 @@ export function PUT_FORNECEDOR_ID(id: FornecedorId) {
     }
 }
 
+//Despesas
+export function GET_DESPESAS() {
+    return {
+        url: `${API_URL}/despesas`,
+    }
+
+}
+
+export function POST_DESPESAS() {
+    return {
+        url: `${API_URL}/despesas/cadastro`,
+    }
+}
+
+//Vendas
 export function GET_VENDAS() {
     return {
         url: `${API_URL}/vendas`,
     }
 }
+
