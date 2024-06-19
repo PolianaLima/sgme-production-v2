@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import DespesaLista from "@/components/despesas/DespesaLista";
 import {Metadata} from "next";
+import deleteDespesa from "@/actions/despesas/delete-despesa";
 
 export const metadata: Metadata = {
     title: "Contas a pagar",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 
 export default async function ContasPagarPage() {
     const {data: despesas} = await getDespesas();
+
     return (
         <div className="p-2 mt-4">
             <div className="d-flex justify-content-between mb-3">
@@ -26,6 +28,7 @@ export default async function ContasPagarPage() {
             <div className="bg-primary p-2 d-flex flex-row rounded-top-2">
                 <i className="h5 bi bi-gear text-white"> <span className="text-white"> Opções</span> </i>
             </div>
+
             <DespesaLista despesas={despesas}/>
 
         </div>

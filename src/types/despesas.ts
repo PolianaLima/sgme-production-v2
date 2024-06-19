@@ -1,12 +1,12 @@
 export type Despesa={
-    id: string;
+    id: DespesaId;
     usuario_id: string;
     fornecedor_id: string;
     nome:string;
     valor: number;
     data_vencimento: string;
     status: string;
-    form_pagamento: string;
+    forma_pagamento: string;
     observacao: string;
     data_created: Date;
     data_updated: Date;

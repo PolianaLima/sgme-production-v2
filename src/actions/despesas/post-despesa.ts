@@ -33,7 +33,7 @@ export default async function postDespesa({}, formData: FormData) {
             return {data: null, ok: false, error: '\*Selecione uma forma de pagamento valida.'}
         }
         const {url} = POST_DESPESAS();
-        const token = cookies().get('token')?.value;
+        const token= cookies().get('token')?.value;
 
         const response =await axios.post(url,despesaRequest,{
             headers: {

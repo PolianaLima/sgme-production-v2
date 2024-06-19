@@ -1,5 +1,6 @@
 import {ProdutoId} from "@/types/produtos";
 import {FornecedorId} from "@/types/fornecedores";
+import {DespesaId} from "@/types/despesas";
 
 export const API_URL = process.env.URL_API;
 
@@ -115,6 +116,24 @@ export function GET_DESPESAS() {
 export function POST_DESPESAS() {
     return {
         url: `${API_URL}/despesas/cadastro`,
+    }
+}
+
+export function PUT_DESPESA_ID(id: ProdutoId) {
+    return {
+        url: `${API_URL}/despesas/${id}`,
+    }
+}
+
+export function GET_DESPESA_ID(id: ProdutoId) {
+    return {
+        url: `${API_URL}/despesas/${id}`,
+    }
+}
+
+export function DELETE_DESPESA_ID(id: DespesaId) {
+    return{
+        url: `${API_URL}/despesas/${id}`,
     }
 }
 
