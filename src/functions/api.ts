@@ -1,6 +1,7 @@
 import {ProdutoId} from "@/types/produtos";
 import {FornecedorId} from "@/types/fornecedores";
 import {DespesaId} from "@/types/despesas";
+import {ReceitaId} from "@/types/receitas";
 
 export const API_URL = process.env.URL_API;
 
@@ -119,13 +120,13 @@ export function POST_DESPESAS() {
     }
 }
 
-export function PUT_DESPESA_ID(id: ProdutoId) {
+export function PUT_DESPESA_ID(id: DespesaId) {
     return {
         url: `${API_URL}/despesas/${id}`,
     }
 }
 
-export function GET_DESPESA_ID(id: ProdutoId) {
+export function GET_DESPESA_ID(id: DespesaId) {
     return {
         url: `${API_URL}/despesas/${id}`,
     }
@@ -134,6 +135,37 @@ export function GET_DESPESA_ID(id: ProdutoId) {
 export function DELETE_DESPESA_ID(id: DespesaId) {
     return{
         url: `${API_URL}/despesas/${id}`,
+    }
+}
+
+//receitas
+export function GET_RECEITAS() {
+    return {
+        url: `${API_URL}/receitas`,
+    }
+}
+
+export function POST_RECEITAS() {
+    return {
+        url: `${API_URL}/receitas/cadastro`,
+    }
+}
+
+export function PUT_RECEITA_ID(id: ReceitaId) {
+    return {
+        url: `${API_URL}/receitas/${id}`,
+    }
+}
+
+export function GET_RECEITA_ID(id: ReceitaId) {
+    return {
+        url: `${API_URL}/receitas/${id}`,
+    }
+}
+
+export function DELETE_RECEITA_ID(id: ReceitaId) {
+    return{
+        url: `${API_URL}/receitas/${id}`,
     }
 }
 

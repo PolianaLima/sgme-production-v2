@@ -74,7 +74,7 @@ export default function MenuLateral() {
                                         className="d-none d-sm-inline"> Contas a pagar</span> </Link>
                             </li>
                             <li className="w-100">
-                                <Link href="#"
+                                <Link href="/sgme/financeiro/contas-a-receber"
                                     className="nav-link px-0">
                                     <i className="fs-5 bi bi-arrow-up-square-fill"></i><span
                                     className="d-none d-sm-inline "> Contas a receber</span> </Link>

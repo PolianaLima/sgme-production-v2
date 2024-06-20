@@ -13,7 +13,7 @@ type Props = {
 }
 export const metadata: Metadata = {
     title: "Alteração de Despesas",
-    description: "Pagina  de alteração de despesas no sistema",
+    description: "Pagina  de alteração de receitas no sistema",
 }
 
 

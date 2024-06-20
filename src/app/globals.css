@@ -138,3 +138,7 @@ link{
     display: block;
     margin-bottom: 0.25rem;
 }
+
+.focus-filter:focus{
+    outline: none !important;
+}

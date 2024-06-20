@@ -1,9 +1,8 @@
 import getDespesas from "@/actions/despesas/get-despesas";
 import Link from "next/link";
 import React from "react";
-import DespesaLista from "@/components/despesas/DespesaLista";
 import {Metadata} from "next";
-import deleteDespesa from "@/actions/despesas/delete-despesa";
+import DespesaLista from "@/components/despesas/despesa-lista";
 
 export const metadata: Metadata = {
     title: "Contas a pagar",
