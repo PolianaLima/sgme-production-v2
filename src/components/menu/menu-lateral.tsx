@@ -81,7 +81,7 @@ export default function MenuLateral() {
                             </li>
 
                             <li className="w-100">
-                                <Link href="#" className="nav-link px-0">
+                                <Link href="/sgme/financeiro/fluxo-caixa" className="nav-link px-0">
                                     <i className="fs-5 bi bi-currency-exchange"></i><span
                                     className="d-none d-sm-inline "> Fluxo Caixa</span> </Link>
                             </li>

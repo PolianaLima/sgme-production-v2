@@ -1,20 +1,21 @@
 'use client';
 
 import FormButton from "@/components/shared/FormButton";
-import {Fornecedor} from "@/types/fornecedores";
 import Input from "@/components/forms/input";
 import {useFormState} from "react-dom";
 import {useEffect} from "react";
 import postDespesa from "@/actions/despesas/post-despesa";
 import ErrorMessage from "@/components/message/erro-message";
+import {Cliente} from "@/types/clientes";
+import postReceita from "@/actions/receitas/post-receita";
 
 type Props = {
-    fornecedores?: Fornecedor[] | null
+    clientes?: Cliente[] | null
 }
 
-export default function AdicionarDespesaForm({fornecedores}: Props) {
+export default function AdicionarReceitaForm({clientes}: Props) {
 
-    const [state, action] = useFormState(postDespesa, {
+    const [state, action] = useFormState(postReceita, {
         ok: false,
         error: '',
         data: null
@@ -22,23 +23,24 @@ export default function AdicionarDespesaForm({fornecedores}: Props) {
 
     useEffect(() => {
         if (state.ok) {
-            window.location.href = '/sgme/financeiro/contas-a-pagar';
+            window.location.href = '/sgme/financeiro/contas-a-receber';
         }
     }, [state]);
     return (
         <div className="w-100 p-2">
             <form action={action} className="w-100">
                 <div className="mb-3">
-                    <label htmlFor="fornecedor" className="form-label">Fornecedor</label>
-                    <select className="select" id="fornecedor" name="fornecedor_id">
-                        <option>Selecione um fornecedor</option>
-                        {fornecedores?.map((fornecedor) => (
-                            <option key={fornecedor.id} value={fornecedor.id}>{fornecedor.nome}</option>
+                    <label htmlFor="cliente" className="form-label">Cliente</label>
+                    <select className="select" id="cliente" name="cliente_id">
+                        <option>Selecione um Cliente</option>
+                        {clientes?.map((cliente) => (
+                            <option key={cliente.id} value={cliente.id}>{cliente.nome}</option>
                         ))}
                     </select>
 
-                    <Input label="Valor" name="valor" type="text" placeholder={state ? ("*Campo Obrigatorio") : "Valor"}
+                    <Input label="Valor" name="valor" type="text" placeholder="Valor"
                            error={state.error}/>
+
                     <Input label="Data de Vencimento" name="data_vencimento" type="date"/>
 
                     <div className="mb-3">
@@ -63,7 +65,7 @@ export default function AdicionarDespesaForm({fornecedores}: Props) {
 
                 <ErrorMessage error={state.error}/>
 
-                <FormButton url="/sgme/financeiro/contas-a-pagar"/>
+                <FormButton url="/sgme/financeiro/contas-a-receber"/>
             </form>
         </div>
     )
